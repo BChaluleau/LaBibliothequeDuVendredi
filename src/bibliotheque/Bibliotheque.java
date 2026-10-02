@@ -24,6 +24,7 @@ public class Bibliotheque {
 	}
 
 	private Ouvrage ajouteOuvrage(Ouvrage ouvrage) {
+		assert nbOuvrages < nbOuvragesMax;
 		if (nbOuvrages >= nbOuvragesMax) {
 			System.err.println("Je suis full");
 			return null;
