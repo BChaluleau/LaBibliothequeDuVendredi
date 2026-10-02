@@ -33,8 +33,9 @@ public class Bibliotheque {
 		return ouvrage;
 	}
 
-	public Ouvrage ajouteOuvrage(String titre, String auteurs, String editeur, int annee, String isbn) {
-		Ouvrage nouveau = new Ouvrage(titre, auteurs, editeur, annee, isbn);
+	public Ouvrage ajouteOuvrage(String titre, String auteurs, String editeur, int annee, String isbn,
+			TypeLitteraire type) {
+		Ouvrage nouveau = new Ouvrage(titre, auteurs, editeur, annee, isbn, type);
 		return ajouteOuvrage(nouveau);
 	}
 
