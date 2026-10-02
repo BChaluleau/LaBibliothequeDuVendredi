@@ -6,7 +6,8 @@ public class Exemplaire {
 	private boolean empruntable = true; // par défaut un exemplaire va être empruntable
 	private boolean enLigne = false;
 
-	public Exemplaire(String cote) {
+	// instanciable par le package
+	protected Exemplaire(String cote) {
 		System.out.println("Nouvel exemplaire " + cote);
 		this.cote = cote;
 	}

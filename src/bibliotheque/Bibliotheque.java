@@ -23,9 +23,19 @@ public class Bibliotheque {
 		return ouvrages;
 	}
 
-	public void ajouteOuvrage(Ouvrage ouvrage) {
+	private Ouvrage ajouteOuvrage(Ouvrage ouvrage) {
+		if (nbOuvrages >= nbOuvragesMax) {
+			System.err.println("Je suis full");
+			return null;
+		}
 		ouvrages[nbOuvrages] = ouvrage; // this pas obligatoire (pas d'ambiguité)
 		nbOuvrages++;
+		return ouvrage;
+	}
+
+	public Ouvrage ajouteOuvrage(String titre, String auteurs, String editeur, int annee, String isbn) {
+		Ouvrage nouveau = new Ouvrage(titre, auteurs, editeur, annee, isbn);
+		return ajouteOuvrage(nouveau);
 	}
 
 	@Override
