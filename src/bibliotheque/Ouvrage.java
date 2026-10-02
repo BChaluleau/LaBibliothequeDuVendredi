@@ -1,5 +1,7 @@
 package bibliotheque;
 
+import java.util.Arrays;
+
 public class Ouvrage { // classe Ouvrage : nouveau type disponible !
 	private String titre;
 	private String auteurs;
@@ -19,6 +21,16 @@ public class Ouvrage { // classe Ouvrage : nouveau type disponible !
 		this.editeur = editeur;
 		this.annee = annee;
 		this.isbn = isbn;
+	}
+
+	public void ajouteExemplaire(Exemplaire ex) {
+		exemplaires[nbExemplaires] = ex;
+		nbExemplaires++;
+	}
+
+	@Override
+	public String toString() {
+		return "Ouvrage [titre=" + titre + ", exemplaires=" + Arrays.toString(exemplaires) + "]";
 	}
 
 }

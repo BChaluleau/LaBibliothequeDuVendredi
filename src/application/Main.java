@@ -9,6 +9,8 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Lancement...");
 		Bibliotheque toutePetite = new Bibliotheque(3);
+		Bibliotheque uneAutre = new Bibliotheque(3);
+
 		System.out.println(toutePetite.getNbOuvrages()); // 0
 		System.out.println(toutePetite.getOuvrages().length); // 3
 
@@ -20,6 +22,14 @@ public class Main {
 
 		Exemplaire e1 = new Exemplaire("COTE_1");
 		Exemplaire e2 = new Exemplaire("COTE_2");
+
+		toutePetite.ajouteOuvrage(o1);
+		o1.ajouteExemplaire(e1);
+		o2.ajouteExemplaire(e2);
+		uneAutre.ajouteOuvrage(o2);
+
+		System.out.println(toutePetite); // afficher représentation textuelle Bibliotheque
+		System.out.println(uneAutre);
 
 	}
 

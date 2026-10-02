@@ -32,4 +32,9 @@ public class Exemplaire {
 		return cote;
 	}
 
+	@Override
+	public String toString() {
+		return cote;
+	}
+
 }
